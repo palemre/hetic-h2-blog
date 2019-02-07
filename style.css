@@ -1,0 +1,103 @@
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    color: #f8f8ff;
+    font-family: 'Helvetica';
+}
+
+/*
+ * ADMIN PANEL
+*/
+.header
+{
+    width: 100vw;
+    height: 20vh;
+    background: #0f056b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header div
+{
+    padding: 1.5vw 1.5vw;
+    user-select: none;
+}
+
+.header .link:hover
+{
+    background: #f9f9ff;
+    color: black;
+}
+
+.admin-panel
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*
+ * ADMIN PANEL LEFT SECTION : NAVIGATION
+*/
+.admin-panel-left-nav
+{
+    width: 20vw;
+    height: 80vh;
+    background: lightgray;
+    overflow-y: auto;
+    flex: 1 0 20%;
+}
+
+.admin-panel-left-nav h3
+{
+    text-align: center;
+    color: #f8f8ff;
+    font-weight: bold;
+    padding: 5px 0;
+    background: #0f056b;
+}
+
+.admin-panel-left-nav ul li
+{
+    padding: 10px 0;
+}
+
+.admin-panel-left-nav ul li:hover
+{
+    background: #f8f8ff;
+    color: #0f056b;
+}
+
+.admin-panel-left-nav ul li a
+{
+    padding: 0 20px;
+    display: block;
+}
+
+/*
+ * ADMIN PANEL RIGHT SECTION : CONTENT
+*/
+.admin-panel-right-content
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: #f8f8ff;
+    flex: 1 0 80%;
+    color: #000000;
+}
+
+.admin-panel-right-content h3
+{
+    text-align: center;
+}
+
+.admin-panel-right-content .add-category
+{
+
+    padding: 15vh 5vw;
+}
