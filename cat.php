@@ -1,8 +1,32 @@
+<?php include 'database.php'; ?>
+
+<!-- RIGH SIDE NAV MENU -->
 <div class="admin-panel-right-content">
     <h3>Categories</h3>
     <div class="add-category">
-        <form action="post">
-            <input type="text" name="add-category" placeholder="Category Name">
+        <form method="post" action="">
+            <input type="text" name="cat_name" placeholder="Category Name">
+            <input type="submit" name="add_cat">
         </form>
     </div>
 </div>
+
+
+<!-- ADD FOOD CATEGORY -->
+<?php
+    if(isset($_POST['add_cat']))
+    {
+        $cat_name = $_POST['cat_name'];
+        $prepare = $pdo->prepare('
+            INSERT INTO
+                cat_name (cat_name)
+            VALUES
+                (:cat_name)
+        ');
+
+        $prepare->bindValue('cat_name', $cat_name);
+        $execute = $prepare->execute();
+    }
+?>
+
+<!-- ADD FOOD SUBCATEGORY -->

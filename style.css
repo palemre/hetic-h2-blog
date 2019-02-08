@@ -98,6 +98,11 @@ body
 
 .admin-panel-right-content .add-category
 {
-
     padding: 15vh 5vw;
+    text-align: center;
+}
+
+.admin-panel-right-content .add-category input
+{
+    border: 1px solid #000000;
 }

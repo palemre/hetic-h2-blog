@@ -4,6 +4,7 @@
         <ul>
             <li><a href="index.php">Dashboard</a></li>
             <li><a href="index.php?cat">Categories</a></li>
+            <li><a href="index.php?sub_cat">Sub Categories</a></li>
         </ul>
     </div>
 
@@ -17,6 +18,10 @@
         if(isset($_GET['cat']))
         {
             include 'cat.php';
+        }
+        else if(isset($_GET['sub_cat']))
+        {
+            include 'sub_cat';
         }
     ?>
 </div>
