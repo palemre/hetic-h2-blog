@@ -26,7 +26,7 @@
                     <td>".$category->cat_id."</td>
                     <td>".$category->cat_name."</td>
                     <td><a href='index.php?cat&edit_cat=".$category->cat_id."'>Edit</a></td>
-                    <td><a href='#'>Delete</a></td>
+                    <td><a href='index.php?cat&delete_cat=".$category->cat_id."'>Delete</a></td>
                 </tr>";
         endforeach;
     }
@@ -50,6 +50,17 @@
             echo "<script>alert('Category name updated')</script>";
         }
     }
+
+    //DELETE FOOD CATEGORY
+    if(isset($_GET['delete_cat']))
+    {
+        $cat_id = $_GET['delete_cat'];
+        $prepare = $pdo->prepare('DELETE FROM cat WHERE cat_id = :cat_id');
+        $prepare->bindValue('cat_id', $cat_id);
+        $prepare->execute();
+        echo "<script>alert('Category deleted')</script>";
+        echo "<script>window.open('index.php?cat','_self'</script>";
+    }
 ?>
 
 <!-- RIGHT SIDE CONTENT -->
@@ -60,7 +71,7 @@
     <?php if(isset($_GET['edit_cat'])) { ?>
         <div class="add-category">
             <form method="post" action="">
-                <input type="text" name="cat_name" placeholder="<?php echo $cat_name->cat_name ?>">
+                <input type="text" name="cat_name" placeholder="<?= $cat_name->cat_name ?>">
                 <input type="submit" name="edit_cat" value="Update category name">
             </form>
         </div>
@@ -82,7 +93,7 @@
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-            <?php echo view_cat(); ?>
+            <?= view_cat(); ?>
         </table>
     <?php } ?>
 </div>
