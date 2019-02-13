@@ -1,5 +1,5 @@
+<!-- CONNECTION TO DATABASE -->
 <?php
-
     define('DB_HOST', 'localhost');
     define('DB_PORT', '8888');
     define('DB_NAME', 'test');

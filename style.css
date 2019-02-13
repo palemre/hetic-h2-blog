@@ -3,10 +3,17 @@ a
     text-decoration: none;
 }
 
+select
+{
+    border: 1px solid #000000;
+}
+
 body
 {
     color: #f8f8ff;
     font-family: 'Helvetica';
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*
@@ -14,11 +21,12 @@ body
 */
 .header
 {
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     background: #0f056b;
     display: flex;
     justify-content: space-between;
+    flex: 1 0 100%;
 }
 
 .header div
@@ -37,7 +45,6 @@ body
 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 /*
@@ -87,7 +94,7 @@ body
     height: 100vh;
     overflow-y: auto;
     background: #f8f8ff;
-    flex: 1 0 80%;
+    flex: 1 0 79%;
     color: #000000;
 }
 

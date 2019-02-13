@@ -1,3 +1,4 @@
+<!-- ADMIN PANEL LEFT NAV MENU -->
 <div class="admin-panel">
     <div class="admin-panel-left-nav">
         <h3>Overview</h3>
@@ -7,22 +8,16 @@
             <li><a href="index.php?sub_cat">Sub Categories</a></li>
         </ul>
     </div>
-
-    <?php if(!isset($_GET['cat'])) { ?>
-        <div class="admin-panel-right-content">
-            <h3>Overview</h3>
-        </div>
-    <?php } ?>
-
-    <?php
-        if(isset($_GET['cat']))
-        {
-            include 'cat.php';
-        }
-        else if(isset($_GET['sub_cat']))
-        {
-            include 'sub_cat';
-        }
-    ?>
 </div>
+<!-- RIGHT : CONTENT DEPENDING ON PAGE SET -->
+<?php
+    if(isset($_GET['cat']))
+    {
+        include 'cat.php';
+    }
+    else if(isset($_GET['sub_cat']))
+    {
+        include 'sub_cat.php';
+    }
+?>
 
