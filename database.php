@@ -1,10 +1,10 @@
 <!-- CONNECTION TO DATABASE -->
 <?php
-    define('DB_HOST', 'localhost');
-    define('DB_PORT', '8888');
-    define('DB_NAME', 'test');
-    define('DB_USER', 'root');
-    define('DB_PASS', 'root');
+    if (!defined('DB_HOST')) define('DB_HOST', 'localhost');
+    if (!defined('DB_PORT')) define('DB_PORT', '8888');
+    if (!defined('DB_NAME')) define('DB_NAME', 'test');
+    if (!defined('DB_USER')) define('DB_USER', 'root');
+    if (!defined('DB_PASS')) define('DB_PASS', 'root');
     
     try
     {
