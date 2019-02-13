@@ -1,30 +1,3 @@
-<!-- RIGH SIDE NAV MENU -->
-<div class="admin-panel-right-content">
-    <h3>Sub Categories</h3>
-    <div class="add-category">
-        <form method="post" action="">
-            <select name="cat_id">
-                <option value="">Select Category</option>
-                <?php echo select_cat(); ?>
-            </select>
-            <input type="text" name="sub_cat_name" placeholder="Sub Category Name">
-            <input type="submit" name="add_sub_cat" value="Add sub category">
-        </form>
-    </div>
-
-    <!-- DISPLAY SUB CATEGORIES -->
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Category Name</th>
-            <th>Sub Category Name</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        <?php echo view_sub_cat(); ?>
-    </table>
-</div>
-
 <?php
     //ADD FOOD SUB CATEGORY : SUB CATEGORY HAS SAME CATEGORY ID DEPENDING ON PARENT CATEGORY ID
     include 'database.php';
@@ -64,11 +37,11 @@
             $prepare = $pdo->prepare('SELECT * FROM cat WHERE cat_id = :sub_cat_parent_id');
             $prepare->bindValue('sub_cat_parent_id', $sub_cat_parent_id);
             $prepare->execute();
-            $name = $prepare->fetchAll();
+            $parent_cat_name = $prepare->fetch();
 
             echo "<tr>
                     <td>".$sub_category->sub_cat_id."</td>
-                    <td>".$name['0']->cat_name."</td>
+                    <td>".$parent_cat_name->cat_name."</td>
                     <td>".$sub_category->sub_cat_name."</td>
                     <td><a href='#'>Edit</a></td>
                     <td><a href='#'>Delete</a></td>
@@ -76,3 +49,30 @@
         endforeach;
     }
 ?>
+
+<!-- RIGH SIDE NAV MENU -->
+<div class="admin-panel-right-content">
+    <h3>Sub Categories</h3>
+    <div class="add-category">
+        <form method="post" action="">
+            <select name="cat_id">
+                <option value="">Select Category</option>
+                <?php echo select_cat(); ?>
+            </select>
+            <input type="text" name="sub_cat_name" placeholder="Sub Category Name">
+            <input type="submit" name="add_sub_cat" value="Add sub category">
+        </form>
+    </div>
+
+    <!-- DISPLAY SUB CATEGORIES -->
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+            <th>Sub Category Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <?php echo view_sub_cat(); ?>
+    </table>
+</div>
