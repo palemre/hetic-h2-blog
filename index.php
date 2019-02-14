@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-
     <!-- HEADER OF INDEX -->
     <div class="header">
         <div class="logo">
@@ -19,7 +18,7 @@
             <h2>Last posts</h2>
         </div>
         <div class="link">
-            <h3>Login</h3>
+            <h3><a href="pages/admin-panel/admin-panel.php">Login</a></h3>
         </div>
     </div>
 

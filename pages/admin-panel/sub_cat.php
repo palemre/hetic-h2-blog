@@ -1,5 +1,5 @@
 <?php
-    include 'database.php';
+    include '../../database.php';
 
     //EDIT SUB CATEGORY NAME
     if(isset($_GET['edit_sub_cat']))
@@ -30,7 +30,7 @@
     
         function select_cat()
         {
-            include 'database.php';
+            include '../../database.php';
             $query = $pdo->query('SELECT * FROM cat');
             $categories = $query->fetchAll();
             foreach($categories as $category) :
@@ -41,7 +41,7 @@
         //DISPLAY SUB CATEGORIES WITH PARENT CATEGORY ID
         function view_sub_cat()
         {
-            include 'database.php';
+            include '../../database.php';
             $query = $pdo->query('SELECT * FROM sub_cat');
             $sub_categories = $query->fetchAll();
             foreach ($sub_categories as $sub_category):

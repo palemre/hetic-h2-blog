@@ -1,5 +1,5 @@
 <?php
-    include 'database.php';
+    include '../../database.php';
 
     //ADD FOOD CATEGORY
     if(isset($_POST['add_cat']))
@@ -18,7 +18,7 @@
     //VIEW CATEGORIES
     function view_cat()
     {
-        include 'database.php';
+        include '../../database.php';
         $query = $pdo->query('SELECT * FROM cat');
         $categories = $query->fetchAll();
         foreach ($categories as $category):
