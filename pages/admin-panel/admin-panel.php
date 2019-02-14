@@ -1,15 +1,3 @@
-<!-- RIGHT : CONTENT DEPENDING ON PAGE SET -->
-<?php
-    if(isset($_GET['cat']))
-    {
-        include 'cat.php';
-    }
-    else if(isset($_GET['sub_cat']))
-    {
-        include 'sub_cat.php';
-    }
-?>
-
 <!-- ADMIN PANEL LEFT NAV MENU -->
 <div class="admin-panel">
     <div class="admin-panel-left-nav">
@@ -21,4 +9,16 @@
         </ul>
     </div>
 </div>
+
+<!-- RIGHT : CONTENT DEPENDING ON PAGE SET -->
+<?php
+    if(isset($_GET['cat']))
+    {
+        include 'cat.php';
+    }
+    else if(isset($_GET['sub_cat']))
+    {
+        include 'sub_cat.php';
+    }
+?>
 
