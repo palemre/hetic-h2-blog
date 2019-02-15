@@ -70,7 +70,7 @@
     <!-- EDIT CATEGORY -->
     <?php if(isset($_GET['edit_cat'])) { ?>
         <div class="add-category">
-            <form method="post" action="">
+            <form method="post" action="#">
                 <input type="text" name="cat_name" placeholder="<?= $cat_name->cat_name ?>">
                 <input type="submit" name="edit_cat" value="Update category name">
             </form>

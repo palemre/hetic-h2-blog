@@ -84,7 +84,7 @@
         <?php } else { ?>
 
             <!-- ADD SUB CATEGORY -->
-            <form method="post" action="">
+            <form method="post" action="#">
                 <select name="cat_id">
                     <option value="">Select Category</option>
                     <?= select_cat(); ?>

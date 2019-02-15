@@ -116,7 +116,7 @@ body
 }
 
 /*
- * INDEX BLOG POSTS
+ * INDEX BLOG POSTS OVERVIEW
 */
 .posts
 {
@@ -146,7 +146,7 @@ body
 }
 
 /*
- * DISPLAYED POST
+ * DISPLAYED FULL SIZE POST
 */
 .post h1
 {
@@ -168,6 +168,7 @@ body
     text-align: justify;
     margin: 0 0 25px 50px;
     color: #000000;
+    line-height: 1.2rem;
 }
 
 .post span
@@ -177,26 +178,58 @@ body
 }
 
 /*
- * LOGIN FORM
+ * COMMENTS
 */
-.login-box
-{
-    width: 50%;
-    height: 65%;
-    margin: 0 auto;
-    color: #000000;
-    text-align: center;
-}
-
-.login-box h2
+.comments-title
 {
     font-size: 1.4rem;
-    text-align: center;
+    margin: 100px 0 25px 50px;
+    color: #0f056b;
+    width: 100%;
 }
 
-.login-box input
+blockquote
 {
-    border: 1px solid #000000;
+    margin: 0 0 15px 50px;
+    width: 60%;
+    color: #000000;
+}
+
+blockquote p
+{
+    margin-top: 10px;
+}
+
+.no-comments-title
+{
+    margin-left: 50px;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.new-comment-form
+{
+    width: 100%;
+    margin: 25px 50%;
+    transform: translateX(-50%);
+}
+
+.new-comment-form p
+{
+    font-size: 1.2rem;
+    color: #0f056b;
+    margin-bottom: 20px;
+}
+
+.new-comment-form input
+{
     display: block;
-    margin: 50px auto 0 auto;
+    border: 1px solid #000000;
+    margin: 10px 0;
+}
+
+.new-comment-form input[value="Add comment"]
+{
+    background: #ff0000;
+    cursor: pointer;
 }
