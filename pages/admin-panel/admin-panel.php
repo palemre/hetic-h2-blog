@@ -30,6 +30,8 @@
                 <li><a href="admin-panel.php">Dashboard</a></li>
                 <li><a href="admin-panel.php?cat">Categories</a></li>
                 <li><a href="admin-panel.php?sub_cat">Sub Categories</a></li>
+                <li><a href="admin-panel.php?posts">Posts</a></li>
+                <li><a href="admin-panel.php?comments">Comments</a></li>
             </ul>
         </div>
     </div>
@@ -43,6 +45,14 @@
         else if(isset($_GET['sub_cat']))
         {
             include 'sub_cat.php';
+        }
+        else if(isset($_GET['posts']))
+        {
+            include 'posts.php';
+        }
+        else if(isset($_GET['comments']))
+        {
+            include 'comments.php';
         }
     ?>
 </body>
