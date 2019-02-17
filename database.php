@@ -1,5 +1,9 @@
 <!-- CONNECTION TO DATABASE -->
 <?php
+    // START SESSION FOR POLLS
+    session_start();
+    $_SESSION['user_id'] = 9090;
+
     if (!defined('DB_HOST')) define('DB_HOST', 'localhost');
     if (!defined('DB_PORT')) define('DB_PORT', '8888');
     if (!defined('DB_NAME')) define('DB_NAME', 'burno_cooking');

@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <!-- RIGHT : CONTENT DEPENDING ON PAGE SET -->
+    <!-- CONTENT DEPENDING ON PAGE SET -->
     <?php
         if(isset($_GET['cat']))
         {
